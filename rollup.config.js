@@ -1,11 +1,12 @@
-import { nodeResolve } from '@rollup/plugin-node-resolve';import commonjs from 'rollup-plugin-commonjs';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs';
 import babel from 'rollup-plugin-babel';
 
 export default {
-  input: 'src/index.js', // 入口文件
+  input: 'src/index.js',
   output: [
     {
-      file: 'dist/my-module.esm.js', // ES 模块
+      file: 'rollup/index.js', // ES module
       format: 'es',
 			inlineDynamicImports: true
     }
@@ -15,8 +16,8 @@ export default {
 		}),
     // commonjs(),
     babel({
-      exclude: 'node_modules/**' // 使用 Babel 转译你的源码
+      exclude: 'node_modules/**'
     })
   ],
-  external: ["idb"],
+  external: ['idb'],
 };

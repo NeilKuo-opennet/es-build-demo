@@ -3,13 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "module": "dist/my-module.esm.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "build2": "esbuild src/index.js --bundle --outfile=out.js",
-    "build3": "rollup -c rollup.config.js"
+    "build-webpack": "webpack",
+    "build-esbuild": "esbuild src/index.js --bundle --outfile=esbuild/index.js",
+    "build-rollup": "rollup -c rollup.config.js"
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +20,7 @@
     "esbuild": "0.19.2",
     "firebase": "^10.3.1",
     "idb": "^7.1.1",
+    "lodash": "^4.17.21",
     "rollup": "^2.0.4",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",

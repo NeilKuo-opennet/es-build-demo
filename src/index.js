@@ -5,6 +5,9 @@ function test () {
 	import('dayjs').then((dayjs) => {
 		console.log(dayjs.format('YYYY-MM-DD'))
 	})
+	import('./myLib').then(({ myLibFn }) => {
+		myLibFn()
+	})
 }
 
 export default test
