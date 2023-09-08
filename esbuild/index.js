@@ -2904,7 +2904,8 @@
   function test() {
     console.log(openDB);
     Promise.resolve().then(() => __toESM(require_dayjs_min())).then((dayjs) => {
-      console.log(dayjs.format("YYYY-MM-DD"));
+      console.log(dayjs);
+      console.log(dayjs.default().format("YYYY-MM-DD"));
     });
     Promise.resolve().then(() => (init_myLib(), myLib_exports)).then(({ myLibFn: myLibFn2 }) => {
       myLibFn2();

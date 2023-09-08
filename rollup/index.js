@@ -3,7 +3,8 @@ import { openDB } from 'idb';
 function test() {
   console.log(openDB);
   Promise.resolve().then(function () { return dayjs_min; }).then(dayjs => {
-    console.log(dayjs.format('YYYY-MM-DD'));
+    console.log(dayjs);
+    console.log(dayjs.default().format('YYYY-MM-DD'));
   });
   Promise.resolve().then(function () { return myLib; }).then(({
     myLibFn
